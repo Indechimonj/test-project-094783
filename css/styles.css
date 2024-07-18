@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap');
+.header{
+    position: fixed;
+    width: 100%;
+    top:0;
+    left: 0;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+}
+.nav{  
+    position: relative;
+    height: var(--header-height);
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.nav__logo{
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+}
+.nav__toggle,
+.nav__close{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1150px){
+    .nav__menu{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color:hsla(0,0%,100%,.1);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        width:80%;
+        height:100%;
+        padding:6rem 3rem 0;
+        transition:right.4s;
+        
+    }
+}
+.nav__list{
+    display:flex;
+    flex-direction:column;
+    row-gap: 3em;
+    
+}
+
+.nav__link{
+    color:var(--white-color);
+    font-weight:var(--font-semi-bold);
+}
+.nav__link:hover{
+    text-decoration: underline;
+}
+.nav__close{
+    position: absolte;
+    top: 1rem;
+    right: 1.5rem;
+}
+.show-menu{
+    right: 0;
+}
+.home__swiper{
+    position: relative;
+    z-index: (--z-tootip)
+}
+
+.home__article{
+    position: relative;
+    padding-top: 13rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.home__img,
+.home__shadow,
+.home__content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.home__img{
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    
+}
+.home__shadow{
+    background-color: hsla(0,0%,0%,.05);
+    z-index: -1;
+}
+.home__data{
+    text-align: center;
+} 
+
+.home__subtitle{
+    font-size: var(--h3-font-size);
+    margin-bottom: .5rem;
+}
+
+.home__title{
+    font-size: var(--biggest-font-size);
+    margin-bottom: 2.5rem;
+    font-weight: var(--font-bold);
+}
+
+.home__button{
+    color: var(--white-color);
+    display: incline-flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: var(--font-semi-bold);  
+}
+
+.home__button i{
+    font-size: 1.5rem;
+    font-weight: initial;
+    transition: transform .4s;
+    
+}
+
+.home__button:hover i{
+    transform: translateX()
+}
+
+
+
+
+
